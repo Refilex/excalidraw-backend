@@ -43,6 +43,7 @@ const io = socketIO(server, {
 
 // listens on host:9090/metrics
 prometheus.metrics(io, {
+    port: process.env.PROMETHEUS_PORT,
     collectDefaultMetrics: true
 });
 
